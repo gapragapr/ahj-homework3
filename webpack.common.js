@@ -31,14 +31,13 @@ module.exports = {
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
-      // {
-      //   test: /\.png$/,
-      //   use: [
-      //     {
-      //       loader: 'url-loader'
-      //     }
-      //   ]
-      // },
+      {
+        test: /\.(jpe?g|png|gif|svg|ico)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/img/[name][ext]'
+        },
+      }
     ],
   },
   plugins: [

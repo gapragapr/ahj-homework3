@@ -115,7 +115,7 @@ export default class gamePlay{
 
                 if (document.querySelector('.health').textContent === '0'){
                     alert(`Вы проиграли! Ваш счет: ${score}`)
-                    this.init()
+                    location.reload()
                 }
             })
         })
